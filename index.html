@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parfum Laundry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .hero {
+            background-image: url('images/gambar2.png');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Gerhana Laundry</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Gerhana Laundry</h1>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Tentang Kami</h2>
+                    <p>Kami menyediakan parfum terbaik untuk layanan laundry Anda. Parfum kami tahan lama, segar, dan sempurna untuk menjaga kebersihan serta aroma menyenangkan pada pakaian Anda.</p>
+                </div>
+                <div class="col-md-6">
+                    <!-- Gambar yang diperbaiki -->
+                    <img src="images/gambar3.png" alt="Parfum Laundry" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Produk Kami</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card product">
+                        <img src="images/cherry_blossom.png" class="card-img-top" alt="Produk 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantura Wangi Cherry Blossom</h5>
+                            <p class="card-text">Aroma segar dan bersih dari buah cherry yang memberikan kesegaran pada pakaian Anda.</p>
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card product">
+                        <img src="images/sakura.png" class="card-img-top" alt="Produk 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantura Wangi Sakura</h5>
+                            <p class="card-text">Aroma nuansa Jepang dan Wangi dari bunga Sakura yang memberikan kesegaran pada pakaian Anda</p>
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card product">
+                        <img src="images/Jessica.png" class="card-img-top" alt="Produk 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantura Wangi Jessica</h5>
+                            <p class="card-text">Aroma yang menenangkan, sempurna untuk pengalaman dan travelling yang menyejukkan.</p>
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Kontak Kami</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Pesan</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h5>Informasi Kontak</h5>
+                    <p>WhatsApp : 0896-2395-2929</p>
+                    <p>Telepon : 0821-5470-8356</p>
+                    <p>Alamat : Gerhana Hotel, Jl Pangeran Adi 199-201 Kendawangan Kiri, Kalimantan Barat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Parfum Laundry. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
