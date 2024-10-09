@@ -3,17 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parfum Laundry</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Gerhana Laundry - Parfum Laundry Terbaik</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             background-color: #f8f9fa;
+            font-family: 'Montserrat', sans-serif;
         }
+        /* Navbar Styling */
+        .navbar-brand {
+            font-weight: 700;
+        }
+        .nav-link {
+            margin-right: 15px;
+        }
+        .nav-link:hover {
+            color: #ff6f61 !important;
+        }
+        /* Hero Section */
         .hero {
-            background-image: url('images/gambar2.png');
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/gambar2.png');
             background-size: cover;
             background-position: center;
-            height: 600px;
+            height: 100vh;
             color: white;
             display: flex;
             justify-content: center;
@@ -22,45 +39,102 @@
         }
         .hero h1 {
             font-size: 4rem;
+            font-weight: 700;
             text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+            animation: fadeInDown 1s;
         }
-        .product {
-            margin-bottom: 20px; /* Add margin below each product card */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .product img {
-            width: 100%;
-            height: auto;
+        /* About Section */
+        #about img {
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-
+        /* Products Section */
+        #products .card {
+            border: none;
+            transition: transform 0.3s;
+        }
+        #products .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        #products .card-title {
+            font-weight: 700;
+        }
+        #products .btn-primary {
+            background-color: #ff6f61;
+            border: none;
+        }
+        #products .btn-primary:hover {
+            background-color: #ff3d2e;
+        }
+        /* Contact Section */
+        #contact .form-control, #contact .btn-primary {
+            border-radius: 30px;
+        }
+        #contact .btn-primary {
+            background-color: #ff6f61;
+            border: none;
+        }
+        #contact .btn-primary:hover {
+            background-color: #ff3d2e;
+        }
+        /* Footer */
+        footer {
+            background-color: #343a40;
+        }
+        footer p {
+            margin: 0;
+        }
+        /* Scroll to Top Button */
+        #scrollTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            display: none;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        #scrollTop:hover {
+            background-color: #ff3d2e;
+        }
         /* Responsive Mobile View */
         @media (max-width: 768px) {
             .hero {
-                height: 400px; /* Sesuaikan tinggi di layar lebih kecil */
+                height: 70vh;
             }
             .hero h1 {
-                font-size: 2.5rem; /* Ukuran font yang lebih kecil */
+                font-size: 2.5rem;
             }
-            .container {
-                padding-left: 15px;
-                padding-right: 15px;
-            }
-            .product {
-                margin-bottom: 30px; /* Tambahkan jarak antar card di mobile */
+            .nav-link {
+                margin-right: 0;
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- Scroll to Top Button -->
+    <div id="scrollTop" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Gerhana Laundry</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Beranda</a>
                     </li>
@@ -79,20 +153,29 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Gerhana Laundry</h1>
+    <section class="hero d-flex align-items-center">
+        <div class="container text-center">
+            <h1>Gerhana Laundry</h1>
+            <p class="lead mt-3">Parfum Laundry Berkualitas Tinggi untuk Bisnis Anda</p>
+            <a href="#products" class="btn btn-primary btn-lg mt-4">Lihat Produk</a>
+        </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>Tentang Kami</h2>
-                    <p>Kami menyediakan parfum terbaik untuk layanan laundry Anda. Parfum kami tahan lama, segar, dan sempurna untuk menjaga kebersihan serta aroma menyenangkan pada pakaian Anda.</p>
+            <h2 class="text-center mb-5">Tentang Kami</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-2">
+                    <img src="images/gambar3.png" alt="Parfum Laundry" class="img-fluid">
                 </div>
-                <div class="col-md-6">
-                    <img src="images/gambar3.png" alt="Parfum Laundry" class="img-fluid rounded">
+                <div class="col-md-6 order-md-1">
+                    <p class="mb-4">Gerhana Laundry adalah penyedia parfum laundry terkemuka yang menawarkan aroma tahan lama dan segar untuk meningkatkan kualitas layanan laundry Anda. Dengan bahan berkualitas tinggi, kami berkomitmen untuk memberikan yang terbaik bagi pelanggan Anda.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Aroma Tahan Lama</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Bahan Berkualitas</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Harga Terjangkau</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -101,35 +184,44 @@
     <!-- Products Section -->
     <section id="products" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center">Produk Kami</h2>
+            <h2 class="text-center mb-5">Produk Kami</h2>
             <div class="row">
+                <!-- Product 1 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card product">
-                        <img src="images/cherry_blossom.png" class="card-img-top" alt="Produk 1">
+                    <div class="card product h-100">
+                        <img src="images/cherry_blossom.png" class="card-img-top" alt="Cherry Blossom">
                         <div class="card-body">
                             <h5 class="card-title">Pantura Wangi Cherry Blossom</h5>
-                            <p class="card-text">Aroma segar dan bersih dari buah cherry yang memberikan kesegaran pada pakaian Anda.</p>
-                            <a href="https://wa.me/+6289623952929" class="btn btn-primary">Pesan Sekarang</a>
+                            <p class="card-text">Aroma segar dan manis dari bunga cherry yang memberikan kesegaran pada pakaian Anda.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
+                <!-- Product 2 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card product">
-                        <img src="images/sakura.png" class="card-img-top" alt="Produk 2">
+                    <div class="card product h-100">
+                        <img src="images/sakura.png" class="card-img-top" alt="Sakura">
                         <div class="card-body">
                             <h5 class="card-title">Pantura Wangi Sakura</h5>
-                            <p class="card-text">Aroma nuansa Jepang dan Wangi dari bunga Sakura yang memberikan kesegaran pada pakaian Anda.</p>
-                            <a href="https://wa.me/+6289623952929" class="btn btn-primary">Pesan Sekarang</a>
+                            <p class="card-text">Nikmati aroma lembut bunga sakura yang menenangkan dan menyegarkan.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
+                <!-- Product 3 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card product">
-                        <img src="images/Jessica.png" class="card-img-top" alt="Produk 3">
+                    <div class="card product h-100">
+                        <img src="images/jessica.png" class="card-img-top" alt="Jessica">
                         <div class="card-body">
                             <h5 class="card-title">Pantura Wangi Jessica</h5>
-                            <p class="card-text">Aroma yang menenangkan, sempurna untuk pengalaman dan travelling yang menyejukkan.</p>
-                            <a href="https://wa.me/+6289623952929" class="btn btn-primary">Pesan Sekarang</a>
+                            <p class="card-text">Aroma eksklusif yang elegan dan memikat, cocok untuk segala suasana.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
@@ -140,40 +232,65 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container">
-            <h2 class="text-center">Kontak Kami</h2>
+            <h2 class="text-center mb-5">Kontak Kami</h2>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 mb-4">
                     <form>
                         <div class="mb-3">
                             <label for="name" class="form-label">Nama</label>
-                            <input type="text" class="form-control" id="name">
+                            <input type="text" class="form-control" id="name" placeholder="Nama Anda">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email">
+                            <input type="email" class="form-control" id="email" placeholder="email@contoh.com">
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Pesan</label>
-                            <textarea class="form-control" id="message" rows="3"></textarea>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Tulis pesan Anda"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                        <button type="submit" class="btn btn-primary w-100">Kirim Pesan</button>
                     </form>
                 </div>
                 <div class="col-md-6">
                     <h5>Informasi Kontak</h5>
-                    <p>WhatsApp : 0896-2395-2929</p>
-                    <p>Telepon : 0821-5470-8356</p>
-                    <p>Alamat : Gerhana Hotel, Jl Pangeran Adi 199-201 Kendawangan Kiri, Kalimantan Barat</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Gerhana Hotel, Jl Pangeran Adi 199-201 Kendawangan Kiri, Kalimantan Barat</p>
+                    <p><i class="fas fa-phone me-2"></i>0821-5470-8356</p>
+                    <p><i class="fab fa-whatsapp me-2"></i>0896-2395-2929</p>
+                    <p><i class="fas fa-envelope me-2"></i>gerhanalaundry@example.com</p>
+                    <h5 class="mt-4">Ikuti Kami</h5>
+                    <a href="#" class="text-dark me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-dark me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" class="text-dark"><i class="fab fa-twitter fa-2x"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 Parfum Laundry. Hak Cipta Dilindungi.</p>
+    <footer class="text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Gerhana Laundry. Hak Cipta Dilindungi.</p>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Scroll to Top Function
+        window.onscroll = function() {
+            var scrollTopButton = document.getElementById('scrollTop');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollTopButton.style.display = "block";
+            } else {
+                scrollTopButton.style.display = "none";
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
 </body>
 </html>
