@@ -73,132 +73,191 @@
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
         }
+
+        .filter-section {
+            margin-bottom: 30px;
+        }
+
+        .filter-input {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Gerhana Laundry</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#products">Produk</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Kontak</a>
-                    </li>
-                </ul>
-            </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo_gerhana.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+            Gerhana Laundry
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tentang Kami</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#products">Produk</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Kontak</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Products Section -->
-    <section id="products" class="py-5">
-        <div class="container">
-            <h2 class="text-center">Semua Produk Kami</h2>
+<!-- Products Section -->
+<section id="products" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Semua Produk Kami</h2>
 
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <input type="text" id="searchInput" class="form-control filter-input" placeholder="Cari produk...">
+            <select id="categoryFilter" class="form-select filter-input">
+                <option value="all">Semua Kategori</option>
+                <option value="Parfum">Parfum</option>
+                <option value="Deterjen">Deterjen</option>
+                <option value="Sabun">Sabun</option>
+            </select>
+        </div>
+
+        <!-- Product Categories -->
+        <div id="productCards">
             <!-- Parfum Category -->
             <div class="category-title">Parfum</div>
             <div class="row">
-                <!-- Product 1 -->
-                <div class="col-md-4 product-card">
+                <div class="col-md-4 product-card" data-category="Parfum">
                     <div class="card h-100">
                         <img src="images/cherry_blossom.png" class="card-img-top product-image" alt="Cherry Blossom">
                         <div class="card-body">
                             <h5 class="card-title">Pantura Wangi Cherry Blossom</h5>
-                            <p class="card-text">Aroma segar dan manis dari bunga cherry yang memberikan kesegaran pada
-                                pakaian Anda.</p>
+                            <p class="card-text">Aroma segar dan manis dari bunga cherry yang memberikan kesegaran pada pakaian Anda.</p>
                         </div>
                         <div class="card-footer bg-transparent border-0">
-                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
-                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
-                <!-- Product 2 -->
-                <div class="col-md-4 product-card">
+
+                <div class="col-md-4 product-card" data-category="Parfum">
                     <div class="card h-100">
                         <img src="images/sakura.png" class="card-img-top product-image" alt="Sakura">
                         <div class="card-body">
                             <h5 class="card-title">Pantura Wangi Sakura</h5>
-                            <p class="card-text">Aroma bunga sakura yang lembut dan menenangkan, ideal untuk pakaian
-                                sehari-hari.</p>
+                            <p class="card-text">Aroma bunga sakura yang lembut dan menenangkan, ideal untuk pakaian sehari-hari.</p>
                         </div>
                         <div class="card-footer bg-transparent border-0">
-                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
-                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
-                <!-- Product 3 -->
-                <div class="col-md-4 product-card">
+
+                <div class="col-md-4 product-card" data-category="Parfum">
                     <div class="card h-100">
-                        <img src="images/blueberry.png" class="card-img-top product-image" alt="Blueberry">
+                        <img src="images/Jessica.png" class="card-img-top product-image" alt="Jessica">
                         <div class="card-body">
-                            <h5 class="card-title">Pantura Wangi Blueberry</h5>
-                            <p class="card-text">Aroma manis blueberry yang segar dan menggoda, cocok untuk segala jenis
-                                pakaian.</p>
+                            <h5 class="card-title">Pantura Wangi Jessica</h5>
+                            <p class="card-text">Aroma manis blueberry yang segar dan menggoda, cocok untuk segala jenis pakaian.</p>
                         </div>
                         <div class="card-footer bg-transparent border-0">
-                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
-                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Parfume 4 -->
+                <div class="col-md-4 product-card" data-category="Parfum">
+                    <div class="card h-100">
+                        <img src="images/Maura.png" class="card-img-top product-image" alt="Maura">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantura Wangi Maura</h5>
+                            <p class="card-text">Aroma manis blueberry yang segar dan menggoda, cocok untuk segala jenis pakaian.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Parfume 5 -->
+                 <div class="col-md-4 product-card" data-category="Parfum">
+                    <div class="card h-100">
+                        <img src="images/Phillux.png" class="card-img-top product-image" alt="Phillux">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantura Wangi Phillux</h5>
+                            <p class="card-text">Aroma manis blueberry yang segar dan menggoda, cocok untuk segala jenis pakaian.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parfume 6 -->
+                <div class="col-md-4 product-card" data-category="Parfum">
+                    <div class="card h-100">
+                        <img src="images/GoldenWays.png" class="card-img-top product-image" alt="GoldenWays">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantura Wangi GoldenWays</h5>
+                            <p class="card-text">Aroma manis blueberry yang segar dan menggoda, cocok untuk segala jenis pakaian.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
 
             <!-- Deterjen Category -->
             <div class="category-title">Deterjen</div>
             <div class="row">
-                <!-- Product 4 -->
-                <div class="col-md-4 product-card">
+                <div class="col-md-4 product-card" data-category="Deterjen">
                     <div class="card h-100">
-                        <img src="images/detergent1.png" class="card-img-top product-image" alt="Deterjen 1">
+                        <img src="images/deterjen_lemon.png" class="card-img-top product-image" alt="Deterjen Lemon">
                         <div class="card-body">
-                            <h5 class="card-title">Deterjen Wangi Jeruk</h5>
-                            <p class="card-text">Deterjen dengan aroma jeruk segar untuk mencuci pakaian Anda.</p>
+                            <h5 class="card-title">Deterjen Lemon Fresh</h5>
+                            <p class="card-text">Deterjen dengan aroma lemon yang menyegarkan dan membersihkan pakaian secara efektif.</p>
                         </div>
                         <div class="card-footer bg-transparent border-0">
-                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
-                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
-                <!-- Product 5 -->
-                <div class="col-md-4 product-card">
+
+                <div class="col-md-4 product-card" data-category="Deterjen">
                     <div class="card h-100">
-                        <img src="images/detergent2.png" class="card-img-top product-image" alt="Deterjen 2">
+                        <img src="images/deterjen_lavender.png" class="card-img-top product-image" alt="Deterjen Lavender">
                         <div class="card-body">
-                            <h5 class="card-title">Deterjen Wangi Lavendel</h5>
-                            <p class="card-text">Deterjen dengan aroma lavendel yang menenangkan.</p>
+                            <h5 class="card-title">Deterjen Lavender</h5>
+                            <p class="card-text">Aroma lavender yang lembut dan mampu menjaga keharuman pakaian lebih lama.</p>
                         </div>
                         <div class="card-footer bg-transparent border-0">
-                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
-                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
-                <!-- Product 6 -->
-                <div class="col-md-4 product-card">
+
+                <div class="col-md-4 product-card" data-category="Deterjen">
                     <div class="card h-100">
-                        <img src="images/detergent3.png" class="card-img-top product-image" alt="Deterjen 3">
+                        <img src="images/deterjen_ocean.png" class="card-img-top product-image" alt="Deterjen Ocean">
                         <div class="card-body">
-                            <h5 class="card-title">Deterjen Wangi Mawar</h5>
-                            <p class="card-text">Deterjen dengan aroma mawar yang menyegarkan.</p>
+                            <h5 class="card-title">Deterjen Ocean Breeze</h5>
+                            <p class="card-text">Deterjen dengan aroma ocean yang segar dan memberikan efek relaksasi pada pakaian.</p>
                         </div>
                         <div class="card-footer bg-transparent border-0">
-                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
-                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
@@ -207,61 +266,84 @@
             <!-- Sabun Category -->
             <div class="category-title">Sabun</div>
             <div class="row">
-                <!-- Product 7 -->
-                <div class="col-md-4 product-card">
+                <div class="col-md-4 product-card" data-category="Sabun">
                     <div class="card h-100">
-                        <img src="images/soap1.png" class="card-img-top product-image" alt="Sabun 1">
+                        <img src="images/sabun_mint.png" class="card-img-top product-image" alt="Sabun Mint">
                         <div class="card-body">
-                            <h5 class="card-title">Sabun Batang Mandi Jasmine</h5>
-                            <p class="card-text">Sabun batang mandi dengan aroma melati yang menenangkan.</p>
+                            <h5 class="card-title">Sabun Mint</h5>
+                            <p class="card-text">Sabun mandi dengan aroma mint yang memberikan kesegaran maksimal.</p>
                         </div>
                         <div class="card-footer bg-transparent border-0">
-                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
-                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
-                <!-- Product 8 -->
-                <div class="col-md-4 product-card">
+
+                <div class="col-md-4 product-card" data-category="Sabun">
                     <div class="card h-100">
-                        <img src="images/soap2.png" class="card-img-top product-image" alt="Sabun 2">
+                        <img src="images/sabun_bunga.png" class="card-img-top product-image" alt="Sabun Bunga">
                         <div class="card-body">
-                            <h5 class="card-title">Sabun Batang Mandi Aloe Vera</h5>
-                            <p class="card-text">Sabun batang mandi dengan ekstrak aloe vera yang melembapkan kulit.</p>
+                            <h5 class="card-title">Sabun Bunga</h5>
+                            <p class="card-text">Sabun dengan ekstrak bunga alami yang memberikan aroma yang menenangkan.</p>
                         </div>
                         <div class="card-footer bg-transparent border-0">
-                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
-                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
-                <!-- Product 9 -->
-                <div class="col-md-4 product-card">
+
+                <div class="col-md-4 product-card" data-category="Sabun">
                     <div class="card h-100">
-                        <img src="images/soap3.png" class="card-img-top product-image" alt="Sabun 3">
+                        <img src="images/sabun_kelapa.png" class="card-img-top product-image" alt="Sabun Kelapa">
                         <div class="card-body">
-                            <h5 class="card-title">Sabun Cair Wangi Melati</h5>
-                            <p class="card-text">Sabun cair dengan aroma melati yang menyegarkan.</p>
+                            <h5 class="card-title">Sabun Kelapa</h5>
+                            <p class="card-text">Sabun alami dengan ekstrak kelapa yang melembapkan dan menyehatkan kulit.</p>
                         </div>
                         <div class="card-footer bg-transparent border-0">
-                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
-                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="text-white py-4">
-        <div class="container text-center">
-            <p>&copy; 2024 Gerhana Laundry. All rights reserved.</p>
-        </div>
-    </footer>
+<!-- Footer -->
+<footer class="text-center py-4">
+    <div class="container">
+        <p>&copy; 2024 Gerhana Laundry. All Rights Reserved.</p>
+    </div>
+</footer>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const productCards = document.querySelectorAll('.product-card');
+
+    searchInput.addEventListener('input', filterProducts);
+    categoryFilter.addEventListener('change', filterProducts);
+
+    function filterProducts() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const selectedCategory = categoryFilter.value;
+
+        productCards.forEach(card => {
+            const title = card.querySelector('.card-title').textContent.toLowerCase();
+            const category = card.getAttribute('data-category');
+            const matchesSearch = title.includes(searchTerm);
+            const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
+
+            if (matchesSearch && matchesCategory) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
 </body>
 
 </html>
