@@ -31,8 +31,24 @@
             width: 100%;
             height: auto;
         }
+
+        /* Responsive Mobile View */
+        @media (max-width: 768px) {
+            .hero {
+                height: 400px; /* Sesuaikan tinggi di layar lebih kecil */
+            }
+            .hero h1 {
+                font-size: 2.5rem; /* Ukuran font yang lebih kecil */
+            }
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .product {
+                margin-bottom: 30px; /* Tambahkan jarak antar card di mobile */
+            }
+        }
     </style>
-    
 </head>
 <body>
 
@@ -76,7 +92,6 @@
                     <p>Kami menyediakan parfum terbaik untuk layanan laundry Anda. Parfum kami tahan lama, segar, dan sempurna untuk menjaga kebersihan serta aroma menyenangkan pada pakaian Anda.</p>
                 </div>
                 <div class="col-md-6">
-                    <!-- Gambar yang diperbaiki -->
                     <img src="images/gambar3.png" alt="Parfum Laundry" class="img-fluid rounded">
                 </div>
             </div>
@@ -84,45 +99,43 @@
     </section>
 
     <!-- Products Section -->
-    <!-- Products Section -->
-<section id="products" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center">Produk Kami</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4"> <!-- Added mb-4 for margin bottom -->
-                <div class="card product">
-                    <img src="images/cherry_blossom.png" class="card-img-top" alt="Produk 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Pantura Wangi Cherry Blossom</h5>
-                        <p class="card-text">Aroma segar dan bersih dari buah cherry yang memberikan kesegaran pada pakaian Anda.</p>
-                        <a href="https://wa.me/+6289623952929" class="btn btn-primary">Pesan Sekarang</a>
+    <section id="products" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Produk Kami</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card product">
+                        <img src="images/cherry_blossom.png" class="card-img-top" alt="Produk 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantura Wangi Cherry Blossom</h5>
+                            <p class="card-text">Aroma segar dan bersih dari buah cherry yang memberikan kesegaran pada pakaian Anda.</p>
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary">Pesan Sekarang</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4"> <!-- Added mb-4 for margin bottom -->
-                <div class="card product">
-                    <img src="images/sakura.png" class="card-img-top" alt="Produk 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Pantura Wangi Sakura</h5>
-                        <p class="card-text">Aroma nuansa Jepang dan Wangi dari bunga Sakura yang memberikan kesegaran pada pakaian Anda</p>
-                        <a href="https://wa.me/+6289623952929" class="btn btn-primary">Pesan Sekarang</a>
+                <div class="col-md-4 mb-4">
+                    <div class="card product">
+                        <img src="images/sakura.png" class="card-img-top" alt="Produk 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantura Wangi Sakura</h5>
+                            <p class="card-text">Aroma nuansa Jepang dan Wangi dari bunga Sakura yang memberikan kesegaran pada pakaian Anda.</p>
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary">Pesan Sekarang</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4"> <!-- Added mb-4 for margin bottom -->
-                <div class="card product">
-                    <img src="images/Jessica.png" class="card-img-top" alt="Produk 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Pantura Wangi Jessica</h5>
-                        <p class="card-text">Aroma yang menenangkan, sempurna untuk pengalaman dan travelling yang menyejukkan.</p>
-                        <a href="https://wa.me/+6289623952929" class="btn btn-primary">Pesan Sekarang</a>
+                <div class="col-md-4 mb-4">
+                    <div class="card product">
+                        <img src="images/Jessica.png" class="card-img-top" alt="Produk 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantura Wangi Jessica</h5>
+                            <p class="card-text">Aroma yang menenangkan, sempurna untuk pengalaman dan travelling yang menyejukkan.</p>
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary">Pesan Sekarang</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-5">
