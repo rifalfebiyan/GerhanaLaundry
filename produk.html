@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerhana Laundry - Semua Produk</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+        }
+
+        h2 {
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-title {
+            font-weight: 700;
+        }
+
+        .btn-primary {
+            background-color: #ff6f61;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff3d2e;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+        }
+
+        /* Custom styles */
+        .category-title {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .product-card {
+            margin-bottom: 30px;
+        }
+
+        .product-image {
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Gerhana Laundry</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Semua Produk Kami</h2>
+
+            <!-- Parfum Category -->
+            <div class="category-title">Parfum</div>
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-md-4 product-card">
+                    <div class="card h-100">
+                        <img src="images/cherry_blossom.png" class="card-img-top product-image" alt="Cherry Blossom">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantura Wangi Cherry Blossom</h5>
+                            <p class="card-text">Aroma segar dan manis dari bunga cherry yang memberikan kesegaran pada
+                                pakaian Anda.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
+                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-md-4 product-card">
+                    <div class="card h-100">
+                        <img src="images/sakura.png" class="card-img-top product-image" alt="Sakura">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantura Wangi Sakura</h5>
+                            <p class="card-text">Aroma bunga sakura yang lembut dan menenangkan, ideal untuk pakaian
+                                sehari-hari.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
+                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-md-4 product-card">
+                    <div class="card h-100">
+                        <img src="images/blueberry.png" class="card-img-top product-image" alt="Blueberry">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantura Wangi Blueberry</h5>
+                            <p class="card-text">Aroma manis blueberry yang segar dan menggoda, cocok untuk segala jenis
+                                pakaian.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
+                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deterjen Category -->
+            <div class="category-title">Deterjen</div>
+            <div class="row">
+                <!-- Product 4 -->
+                <div class="col-md-4 product-card">
+                    <div class="card h-100">
+                        <img src="images/detergent1.png" class="card-img-top product-image" alt="Deterjen 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Deterjen Wangi Jeruk</h5>
+                            <p class="card-text">Deterjen dengan aroma jeruk segar untuk mencuci pakaian Anda.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
+                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="col-md-4 product-card">
+                    <div class="card h-100">
+                        <img src="images/detergent2.png" class="card-img-top product-image" alt="Deterjen 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Deterjen Wangi Lavendel</h5>
+                            <p class="card-text">Deterjen dengan aroma lavendel yang menenangkan.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
+                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="col-md-4 product-card">
+                    <div class="card h-100">
+                        <img src="images/detergent3.png" class="card-img-top product-image" alt="Deterjen 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Deterjen Wangi Mawar</h5>
+                            <p class="card-text">Deterjen dengan aroma mawar yang menyegarkan.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
+                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sabun Category -->
+            <div class="category-title">Sabun</div>
+            <div class="row">
+                <!-- Product 7 -->
+                <div class="col-md-4 product-card">
+                    <div class="card h-100">
+                        <img src="images/soap1.png" class="card-img-top product-image" alt="Sabun 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Sabun Batang Mandi Jasmine</h5>
+                            <p class="card-text">Sabun batang mandi dengan aroma melati yang menenangkan.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
+                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 8 -->
+                <div class="col-md-4 product-card">
+                    <div class="card h-100">
+                        <img src="images/soap2.png" class="card-img-top product-image" alt="Sabun 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Sabun Batang Mandi Aloe Vera</h5>
+                            <p class="card-text">Sabun batang mandi dengan ekstrak aloe vera yang melembapkan kulit.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
+                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 9 -->
+                <div class="col-md-4 product-card">
+                    <div class="card h-100">
+                        <img src="images/soap3.png" class="card-img-top product-image" alt="Sabun 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Sabun Cair Wangi Melati</h5>
+                            <p class="card-text">Sabun cair dengan aroma melati yang menyegarkan.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="https://wa.me/+6289623952929" class="btn btn-primary w-100"><i
+                                    class="fab fa-whatsapp me-2"></i>Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Gerhana Laundry. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
